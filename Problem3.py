@@ -20,14 +20,14 @@ def isPrime(n):
             f += 6
         return True
 
-def LargestPrimeFactor(numero):
+def LargestPrimeFactor(number):
     largestfactor = 0
     CurrentDivider = 3
     while True:
-        if isPrime(CurrentDivider) and numero % CurrentDivider == 0:
-            numero = numero / CurrentDivider
+        if isPrime(CurrentDivider) and number % CurrentDivider == 0:
+            number = number / CurrentDivider
             largestfactor = CurrentDivider
-            if numero == 1:
+            if number == 1:
                 break
         CurrentDivider += 2
     return largestfactor
